@@ -22,6 +22,7 @@ public class Player {
     }
 
     public String findPairs() {
+        String result = "";
 
         Map<Value, List<Dice>> dieWithValue = new HashMap<>();
 
@@ -38,6 +39,6 @@ public class Player {
             }
         }
 
-        return null;
+        return result;
     }
 }

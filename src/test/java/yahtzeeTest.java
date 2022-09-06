@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class yahtzeeTest {
@@ -33,5 +34,20 @@ public class yahtzeeTest {
 
     }
 
+    @Test
+    void severalPairTest() {
+
+        var player = new Player(new Dice[]{
+                new Dice(Value.TWO),
+                new Dice(Value.TWO),
+                new Dice(Value.FOUR),
+                new Dice(Value.ONE),
+                new Dice(Value.ONE),
+        });
+
+        assertEquals("pair of 1, pair of 2", player.findPairs());
+
+
+    }
 
 }
