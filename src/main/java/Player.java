@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Player {
 
@@ -33,9 +30,12 @@ public class Player {
             dieWithValue.get(die.getValue()).add(die);
         }
 
-        for (Value value : dieWithValue.keySet()) {
-            if (dieWithValue.get(value).size() == 2) {
-                return "pair of " + value.getValue();
+        for (Value value : Value.values()) {
+            if (dieWithValue.containsKey(value) && dieWithValue.get(value).size() == 2) {
+                if(!result.isEmpty()){
+                    result += ", ";
+                }
+                result += "pair of " + value.getValue();
             }
         }
 

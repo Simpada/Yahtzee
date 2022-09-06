@@ -39,10 +39,10 @@ public class yahtzeeTest {
 
         var player = new Player(new Dice[]{
                 new Dice(Value.TWO),
-                new Dice(Value.TWO),
+                new Dice(Value.ONE),
                 new Dice(Value.FOUR),
                 new Dice(Value.ONE),
-                new Dice(Value.ONE),
+                new Dice(Value.TWO),
         });
 
         assertEquals("pair of 1, pair of 2", player.findPairs());
