@@ -1,9 +1,18 @@
 public class Player {
 
+    private final Dice[] dice;
 
-    public int getSum () {
+    public int result(){
 
-        return 0;
+        int sum = 0;
+
+        for (Dice dice : dice){
+            sum += dice.getValue();
+        }
+        return sum;
     }
 
+    public Player(Dice[] dice) {
+        this.dice = dice;
+    }
 }
