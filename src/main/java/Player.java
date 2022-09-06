@@ -15,4 +15,8 @@ public class Player {
     public Player(Dice[] dice) {
         this.dice = dice;
     }
+
+    public String findPairs() {
+        return null;
+    }
 }

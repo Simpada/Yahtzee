@@ -18,5 +18,20 @@ public class yahtzeeTest {
         assertEquals(15, player.result());
     }
 
+    @Test
+    void pairTest(){
+
+        var player = new Player(new Dice[]{
+                new Dice(Value.TWO),
+                new Dice(Value.THREE),
+                new Dice(Value.FOUR),
+                new Dice(Value.ONE),
+                new Dice(Value.ONE),
+        });
+
+        assertEquals("pair of 1", player.findPairs());
+
+    }
+
 
 }
